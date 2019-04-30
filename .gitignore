@@ -1,0 +1,12 @@
+node_modules/
+env/
+docs/api/
+public/
+temp/
+.idea/
+.eslintignore
+.gitignore
+npm-debug.log
+npm-debug.log.*
+*.iml
+*.iws

@@ -13,7 +13,7 @@ docker-compose up
 
 By default the application will be started on port `8080`. This is configurable via the `config.js` file of the app.
 
-### Endpoints
+### Example
 
 ```sh
 curl  127.0.0.1:8080/live/aapl
