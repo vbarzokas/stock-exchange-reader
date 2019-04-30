@@ -1,0 +1,25 @@
+version: '2'
+services:
+  redis-cluster:
+    network_mode: "host"
+    environment:
+      IP: '127.0.0.1'
+      SENTINEL: ${REDIS_USE_SENTINEL}
+      STANDALONE: ${REDIS_USE_STANDALONE}
+    build:
+      context: ./redis
+      args:
+        redis_version: '5.0.4'
+    hostname: server
+    ports:
+      - '7000-7007:7000-7007'
+      - '5000-5002:5000-5002'
+  app:
+    network_mode: "host"
+    build: ./app
+    restart: always
+    ports:
+      - 8080:8080
+    environment:
+      - NODE_ENV=development
+      - PORT=8080

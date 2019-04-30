@@ -1,0 +1,22 @@
+{
+  "name": "stock-exchange-reader",
+  "version": "1.0.0",
+  "description": "A standalone node.js module capable to read stock ticker prices from stock exchange markets.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "mocha --reporter spec --recursive --ui bdd --bail ./test"
+  },
+  "author": "Vassilis Barzokas",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.3",
+    "ioredis": "^4.9.0",
+    "restify": "^8.3.1"
+  },
+  "devDependencies": {
+    "rewire": "^4.0.1",
+    "sinon": "^7.3.2"
+  }
+}
